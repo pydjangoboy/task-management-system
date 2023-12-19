@@ -1,0 +1,22 @@
+<!-- Delete Task Modal -->
+<div class="modal fade" id="deleteTaskModal{{ task.pk }}" tabindex="-1"
+     aria-labelledby="deleteTaskModalLabel{{ task.pk }}" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteTaskModalLabel{{ task.pk }}">Confirm Task Deletion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete the task:<br><b>{{ task.title }}</b>?</p>
+            </div>
+            <div class="modal-footer">
+                <form method="post" action="{% url 'task_delete' pk=task.pk %}">
+                    {% csrf_token %}
+                    <button class="btn btn-danger" type="submit">Confirm Delete</button>
+                </form>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

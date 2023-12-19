@@ -1,0 +1,26 @@
+<!-- tasks/task_detail.html -->
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ task.title }} Details
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2>{{ task.title }}</h2>
+                <p><strong>Description:</strong> {{ task.description }}</p>
+                <p><strong>Due Date:</strong> {{ task.due_date|date:"F d, Y H:i" }}</p>
+                <p><strong>Status:</strong> {{ task.get_status_display }}</p>
+
+                <!-- You can add more details as needed -->
+
+                <div class="mt-4">
+                    <a href="{% url 'task_edit' pk=task.pk %}" class="btn btn-warning" role="button">Edit Task</a>
+                    <a href="{% url 'task_list' %}" class="btn btn-danger" role="button">Cancle</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
