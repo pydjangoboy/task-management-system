@@ -1,6 +1,8 @@
+import requests
 from django.contrib import messages
 from django.db.models import Q
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import render
 
 from .forms import TaskForm
 from .models import Task
@@ -22,9 +24,6 @@ def task_list(request):
 def task_detail(request, pk):
     task = get_object_or_404(Task, pk=pk)
     return render(request, 'tasks/task_detail.html', {'task': task})
-
-
-from django.contrib import messages  # Import the messages module
 
 
 def task_new(request):
@@ -70,3 +69,8 @@ def task_delete(request, pk):
 
     return render(request, 'tasks/task_confirm_delete.html', {'task': task})
 
+
+def fastapi_task_detail(request, task_id):
+    response = requests.get(f'http://localhost:8081/tasks/{task_id}')
+    task = response.json()['task']
+    return render(request, 'fastapi/task_detail.html', {'task': task})

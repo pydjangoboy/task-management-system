@@ -1,7 +1,6 @@
-```markdown
 # TaskManager
 
-TaskManager is a Django-based web application for managing tasks.
+TaskManager is a Django-based web application for managing tasks. It also integrates with a FastAPI API to fetch task details.
 
 ## Features
 
@@ -11,7 +10,7 @@ TaskManager is a Django-based web application for managing tasks.
 - Edit an existing task
 - Delete a task
 - Search for tasks
-
+- Fetch task details from a FastAPI API
 
 ## Setup and Installation
 
@@ -30,17 +29,35 @@ TaskManager is a Django-based web application for managing tasks.
     pip install -r requirements.txt
     ```
 
-4. Run the migrations:
+4. Run the Django migrations:
     ```
     python manage.py migrate
     ```
 
-5. Start the server:
+5. Start the Django server:
     ```
     python manage.py runserver
     ```
 
-Now, you can navigate to `http://127.0.0.1:8000/` in your browser to view the application.
+6. In a new terminal window, navigate to the FastAPI application directory (replace `path_to_fastapi_app` with the actual path):
+
+    ```
+    cd path_to_fastapi_app
+    ```
+
+7. Install the FastAPI application dependencies (if any):
+
+    ```
+    pip install -r requirements.txt
+    ```
+
+8. Start the FastAPI server on port 8081:
+
+    ```
+     uvicorn Tasks.fastapi:app --host 0.0.0.0 --port 8081
+    ```
+
+Now, you can navigate to `http://127.0.0.1:8000/` in your browser to view the Django application and to `http://127.0.0.1:8081/` to view the FastAPI application.
 
 ## Usage
 
@@ -50,9 +67,8 @@ Now, you can navigate to `http://127.0.0.1:8000/` in your browser to view the ap
 - To edit an existing task, click on the 'Edit' button on the task detail page.
 - To delete a task, click on the 'Delete' button on the task detail page.
 - To search for a task, use the search bar at the top of the page.
+- To view FastAPI task details, click on the task title in the task list.
 
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-```
