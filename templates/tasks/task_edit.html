@@ -10,7 +10,7 @@
                 {% csrf_token %}
 
                 <div class="mb-3">
-                    {{ form.title|as_crispy_field }} 
+                    {{ form.title|as_crispy_field }}
                 </div>
 
                 <div class="mb-3">
@@ -25,7 +25,8 @@
                     {{ form.status|as_crispy_field }}
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-block">Save</button>
+                <button type="submit" class="btn btn-success btn-block">Save</button>
+                <a href="{% url 'task_list' %}" class="btn btn-danger">Cancel</a>
             </form>
         </div>
     </div>
