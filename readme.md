@@ -1,39 +1,40 @@
 # TaskManager
 
-## Screenshots
+## screenshoots
 
 ### API Details View
-![API Details View](screenshots/apidetailsview.png)
+
+![API Details View](screenshoots/apidetailsview.png)
 
 ### API List View
-![API List View](screenshots/apilistview.png)
+![API List View](screenshoots/apilistview.png)
 
 ### API Update View 1
-![API Update View 1](screenshots/apiudpateview1.png)
+![API Update View 1](screenshoots/apiudpateview1.png)
 
 ### API Update View 2
-![API Update View 2](screenshots/apiudpateview2.png)
+![API Update View 2](screenshoots/apiudpateview2.png)
 
 ### Create View Page
-![Create View Page](screenshots/createviewpage.png)
+![Create View Page](screenshoots/createviewpage.png)
 
 ### Delete View Pop Modals
-![Delete View Pop Modals](screenshots/deleteviewpopmodals.png)
+![Delete View Pop Modals](screenshoots/deleteviewpopmodals.png)
 
 ### Edit View Page
-![Edit View Page](screenshots/editviewpage.png)
+![Edit View Page](screenshoots/editviewpage.png)
 
 ### First Page
-![First Page](screenshots/firstpage.png)
+![First Page](screenshoots/firstpage.png)
 
 ### List View Page
-![List View Page](screenshots/listviewpage.png)
+![List View Page](screenshoots/listviewpage.png)
 
 ### Search View
-![Search View](screenshots/searchview.png)
+![Search View](screenshoots/searchview.png)
 
 ### Update View 3
-![Update View 3](screenshots/udpateview3.png)
+![Update View 3](screenshoots/udpateview3.png)
 
 TaskManager is a web application built with Django for managing tasks. It also integrates with a FastAPI API to fetch task details.
 
