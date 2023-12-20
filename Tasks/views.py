@@ -1,14 +1,16 @@
 import requests
 from django.contrib import messages
 from django.db.models import Q
-from django.shortcuts import get_object_or_404, redirect
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, redirect, render
 
 from .forms import TaskForm
 from .models import Task
 
 
 def task_list(request):
+    """
+    View function to display a list of tasks based on user input query.
+    """
     query = request.GET.get('q', '')
 
     if query:
@@ -22,11 +24,17 @@ def task_list(request):
 
 
 def task_detail(request, pk):
+    """
+    View function to display the details of a specific task.
+    """
     task = get_object_or_404(Task, pk=pk)
     return render(request, 'tasks/task_detail.html', {'task': task})
 
 
 def task_new(request):
+    """
+    View function to create a new task.
+    """
     if request.method == "POST":
         form = TaskForm(request.POST)
         if form.is_valid():
@@ -43,6 +51,9 @@ def task_new(request):
 
 
 def task_edit(request, pk):
+    """
+    View function to edit an existing task.
+    """
     task = get_object_or_404(Task, pk=pk)
 
     if request.method == "POST":
@@ -59,6 +70,9 @@ def task_edit(request, pk):
 
 
 def task_delete(request, pk):
+    """
+    View function to delete an existing task.
+    """
     task = get_object_or_404(Task, pk=pk)
 
     if request.method == 'POST':
@@ -71,6 +85,9 @@ def task_delete(request, pk):
 
 
 def fastapi_task_detail(request, task_id):
+    """
+    View function to retrieve and display details of a FastAPI task.
+    """
     response = requests.get(f'http://localhost:8081/tasks/{task_id}')
     task = response.json()['task']
     return render(request, 'fastapi/task_detail.html', {'task': task})

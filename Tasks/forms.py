@@ -3,6 +3,7 @@ from .models import Task
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Fieldset, Submit
 
+
 class TaskForm(forms.ModelForm):
     class Meta:
         model = Task
