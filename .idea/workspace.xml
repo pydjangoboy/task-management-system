@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fe8e654-678c-441e-931c-709355d9f0d9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Tasks/fastapi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tasks/fastapi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tasks/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tasks/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tasks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tasks/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tasks/task_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks/task_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tasks/task_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks/task_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tasks/task_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks/task_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +175,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702960222836</updated>
-      <workItem from="1702960245887" duration="28786000" />
+      <workItem from="1702960245887" duration="28841000" />
     </task>
     <servers />
   </component>
