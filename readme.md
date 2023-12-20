@@ -1,74 +1,104 @@
 # TaskManager
 
-TaskManager is a Django-based web application for managing tasks. It also integrates with a FastAPI API to fetch task details.
+## Screenshots
+
+### API Details View
+![API Details View](screenshots/apidetailsview.png)
+
+### API List View
+![API List View](screenshots/apilistview.png)
+
+### API Update View 1
+![API Update View 1](screenshots/apiudpateview1.png)
+
+### API Update View 2
+![API Update View 2](screenshots/apiudpateview2.png)
+
+### Create View Page
+![Create View Page](screenshots/createviewpage.png)
+
+### Delete View Pop Modals
+![Delete View Pop Modals](screenshots/deleteviewpopmodals.png)
+
+### Edit View Page
+![Edit View Page](screenshots/editviewpage.png)
+
+### First Page
+![First Page](screenshots/firstpage.png)
+
+### List View Page
+![List View Page](screenshots/listviewpage.png)
+
+### Search View
+![Search View](screenshots/searchview.png)
+
+### Update View 3
+![Update View 3](screenshots/udpateview3.png)
+
+TaskManager is a web application built with Django for managing tasks. It also integrates with a FastAPI API to fetch task details.
 
 ## Features
 
-- List all tasks
-- View details of a task
-- Create a new task
-- Edit an existing task
-- Delete a task
-- Search for tasks
-- Fetch task details from a FastAPI API
+- **List all tasks**: The home page displays a list of all tasks.
+- **View details of a task**: Click on a task title to view its details.
+- **Create a new task**: Click on the 'New Task' button to create a new task.
+- **Edit an existing task**: On the task detail page, click on the 'Edit' button to edit the task.
+- **Delete a task**: On the task detail page, click on the 'Delete' button to delete the task.
+- **Search for tasks**: Use the search bar at the top of the page to search for tasks.
+- **Fetch task details from a FastAPI API**: Click on a task title in the task list to fetch its details from the FastAPI API.
 
 ## Setup and Installation
 
-1. Clone the repository:
+1. **Clone the repository**:
     ```
     git clone https://github.com/pydjangoboy/TaskManager.git
     ```
 
-2. Navigate to the project directory:
+2. **Navigate to the project directory**:
     ```
     cd TaskManager
     ```
 
-3. Install the required dependencies:
+3. **Install the required dependencies**:
     ```
     pip install -r requirements.txt
     ```
 
-4. Run the Django migrations:
+4. **Run the Django migrations**:
     ```
     python manage.py migrate
     ```
 
-5. Start the Django server:
+5. **Start the Django server**:
     ```
     python manage.py runserver
     ```
 
-6. In a new terminal window, navigate to the FastAPI application directory (replace `path_to_fastapi_app` with the actual path):
-
+6. **Navigate to the FastAPI application directory** (replace `path_to_fastapi_app` with the actual path):
     ```
-    cd path_to_fastapi_app
+    cd Tasks  --> fastapi.py
     ```
 
-7. Install the FastAPI application dependencies (if any):
-
+7. **Install the FastAPI application dependencies** (if any):
     ```
     pip install -r requirements.txt
     ```
 
-8. Start the FastAPI server on port 8081:
-
+8. **Start the FastAPI server on port 8081**:
     ```
      uvicorn Tasks.fastapi:app --host 0.0.0.0 --port 8081
     ```
 
-Now, you can navigate to `http://127.0.0.1:8000/` in your browser to view the Django application and to `http://127.0.0.1:8081/` to view the FastAPI application.
+After following these steps, you can navigate to `http://127.0.0.1:8000/` in your browser to view the Django application and to `http://127.0.0.1:8081/` to view the FastAPI application.
 
 ## Usage
 
-- To view all tasks, navigate to the home page.
-- To view details of a task, click on the task title.
-- To create a new task, click on the 'New Task' button.
-- To edit an existing task, click on the 'Edit' button on the task detail page.
-- To delete a task, click on the 'Delete' button on the task detail page.
-- To search for a task, use the search bar at the top of the page.
-- To view FastAPI task details, click on the task title in the task list.
+- **View all tasks**: Navigate to the home page.
+- **View details of a task**: Click on the task title.
+- **Create a new task**: Click on the 'New Task' button.
+- **Edit an existing task**: Click on the 'Edit' button on the task detail page.
+- **Delete a task**: Click on the 'Delete' button on the task detail page.
+- **Search for a task**: Use the search bar at the top of the page.
+- **View FastAPI task details**: Click on the task title in the task list.
 
-## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

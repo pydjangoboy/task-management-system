@@ -1,0 +1,14 @@
+### Request to get all tasks
+GET http://localhost:8081/tasks/
+
+### Request to get a specific task
+GET http://localhost:8081/tasks/25
+
+
+### Request to update a specific task
+PUT http://localhost:8081/tasks/26
+Content-Type: application/json
+
+{
+  "status": "In Progress"
+}
